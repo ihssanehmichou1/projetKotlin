@@ -46,7 +46,9 @@ class Equipes(pays: Pays, equipe: Equipe) {
         }
         return false
     }
-
+    fun setPoints(Joueur:joueurbasket,Points:Int){
+        Joueur.nomPoint=Points
+    }
 
 }
 
@@ -63,6 +65,7 @@ fun main() {
     equipe1.ajout(joueur3)
     equipe1.ajout(joueur4)
 
+
     val nomJoueurRecherche = "Joueur1"
     val indiceJoueur = equipe1.recherche(nomJoueurRecherche)
     equipe1.supression("joueur1")
@@ -72,6 +75,8 @@ fun main() {
     } else {
         println("Le joueur $nomJoueurRecherche n'existe pas dans l'équipe.")
     }
+
+
 }
 
 
