@@ -50,5 +50,12 @@ fun main(){
     val numerosGR = numeros.groupBy { it >= 0 }
     println(numerosGR)
 
+    val nbHeuresTotales = list_modules.fold(0) {nbTotal, module -> nbTotal + module.nbHeures}
+    println(nbHeuresTotales)
+
+    val  listeTriee1 = list_modules.sortedBy { it.nbHeures }
+    println(listeTriee1)
+    val listTriee2 = list_modules.sortedBy { it.intitule }
+    println(listTriee2)
 
 }
